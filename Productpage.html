@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script>
+        // 获取屏幕大小
+        var deviceWidth = document.documentElement.clientWidth;
+        console.log(deviceWidth)
+        // 设置fontSize,750px rem为100px
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        console.log(document.documentElement.style.fontSize)
+    </script>
+
+    <style>
+
+        *{
+          margin: 0;
+          padding: 0;   
+        }
+
+        h1{
+            color: white;
+            font-size: .3rem;
+            text-align: center;
+            margin-bottom: .12rem;
+        }
+
+        .text1{
+            color: white;
+            font-size: .22rem;
+            text-align: center;
+        }
+
+        .text2{
+            color: white;
+            font-size: .22rem;
+            text-align: center;
+            margin-bottom: .26rem;
+        
+        }
+
+         .text_normal{
+            color: white;
+            font-size: .22rem;
+            margin-left: .2rem;
+            line-height: .4rem;
+            float: left;
+        }
+
+        .line{
+            height: .01rem;
+            background: white;
+            margin:.42rem .4rem .4rem .4rem;   
+        }
+
+        .imag{
+            width: 1.2rem;
+            height: 1.2rem;
+            margin: .8rem auto .26rem;
+            margin-top: .8rem;
+            display: block;
+        }
+
+        .content{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background: rgba(98, 98, 98, .8);
+        }
+
+        .sendcontent{
+            width: 6.7rem;
+            height: 10rem;
+            background: black;
+            margin: .86rem auto .4rem auto;
+            border-radius: .2rem;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .lineclass{
+            padding:0 .14rem;
+        }
+
+        .bottomimg{
+            width: .4rem;
+            height: .4rem;
+            float: left;
+        }
+        
+
+        .bottomdiv{
+            float: left;
+            margin: 0 .4rem;
+        }
+    
+    </style>
+
+</head>
+<body>
+    <div class="content">   
+    <div class="sendcontent">  
+    <img src="./resource/img/m.png" class="imag">
+   <h1>深圳麦当劳明智餐厅</h1>
+   <p class="text2"> 
+       <span>起送</span><span> $0</span><span class="lineclass">|</span><span>配送 $9</span><span class="lineclass">|</span><span>30分钟</span>
+   </p>
+   <p class="text1">配送时间: 00:00-04:45,05:00-10:15,10:30-23:59</p>
+   <div class="line"></div>
+   <div class="bottomdiv">
+    <img class="bottomimg" src="./resource/img/icon_dp_full_star@2x.png">
+    <p class="text_normal">新用户立减18元</p>
+   </div>
+</div>
+</div>
+</body>
+</html>
