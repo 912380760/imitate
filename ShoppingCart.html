@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    
+
     <script>
         // 获取屏幕大小
         var deviceWidth = document.documentElement.clientWidth;
@@ -15,211 +16,304 @@
         console.log(document.documentElement.style.fontSize)
     </script>
 
-<style type="text/css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-    * {
-        margin: 0;
-        padding: 0;
-    }
+        .firstContent {
+            width: 100vw;
+            height: 100vh;
+            background: rgba(7, 17, 27, .6);
+        }
 
-   .firstContent{
-       width: 100vw;
-       height: 100vh;
-       background: rgba(7, 17,27,.6); 
-   }
+        .secondContent {
+            width: 100vw;
+            background: #f4f4f4;
+            position: absolute;
+            bottom: 0;
+            display: block;
+        }
 
-   .secondContent{
-       width: 100vw;
-       background: #f4f4f4;
-       position: absolute;
-       bottom: 0;
-       display: block;
-   }
+        .yellowBox {
+            height: .6rem;
+            background: #f3e6c6;
+            text-align: center;
+            color: #646158;
+            font-size: .22rem;
+            line-height: .6rem;
+        }
 
-   .yellowBox{
-      height: .6rem; 
-      background: #f3e6c6;
-      text-align: center;
-      color: #646158;
-      font-size: .22rem;
-      line-height: .6rem;
-   }
+        .fisrtPocket {
+            height: .6rem;
+            font-size: .24rem;
+            text-align: left;
+            line-height: .6rem;
+            padding-left: .12rem;
+            float: left;
+        }
 
-   .fisrtPocket{
-       height: .6rem;
-       font-size: .24rem;
-       text-align: left;
-       line-height: .6rem;
-       padding-left: .12rem;
-       float: left;
-   }
+        .shoppingCart {
+            font-size: .24rem;
+            text-align: right;
+            line-height: .6rem;
+            padding-right: .2rem;
+        }
 
-   .shoppingCart{
-       font-size: .24rem;
-       text-align: right;
-       line-height: .6rem;
-       padding-right: .2rem;
-   }
+        .greenBox {
+            width: .08rem;
+            height: .6rem;
+            background: #53c123;
+            float: left;
+        }
 
- .greenBox{
-     width: .08rem;
-     height: .6rem;
-     background: #53c123;
-     float: left;
- }
+        .goodsBox {
+            height: 1.2rem;
+            background: white;
+            margin-bottom: .02rem;
+            font-size: .32rem;
+            padding: .24rem .24rem .2rem;
+        }
 
- .goodsBox{
-     height: 1.2rem;
-     background: white;
-     margin-bottom: .01rem;
-     font-size: .32rem;
-     padding: .24rem .24rem .2rem;
- }
+        .goodsBoxleft {
+            width: 3.36rem;
+            float: left;
+        }
 
- .goodsBoxleft{
-    width: 3.36rem;
-    float: left;
- }
+        .goodsBoxright {
+            float: right;
+            text-align: center;
+            line-height: 1.2rem;
+        }
 
- .goodsBoxright{
+        .m {
+            padding-right: .45rem;
+        }
 
-     text-align: center;
-     padding-top: .12rem;  
- }
+        .fl {
+            float: left;
+        }
 
-.goodsText1{
-    font-size: .32rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding-bottom: .16rem;
-}
+        .goodsText1 {
+            font-size: .32rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-bottom: .16rem;
+        }
 
-.goodsText2{
-    width: 3.36rem;
-    font-size: .24rem;
-    color: #b4b4b4;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+        .goodsText2 {
+            width: 3.36rem;
+            font-size: .24rem;
+            color: #b4b4b4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-indent: .1rem;
+        }
 
-.text_normal{
-    font-size: .24rem;
-    line-height: .24rem;
-    text-align: center;
-    padding-left: .88rem;
-}
+        .text_normal {
+            font-size: .24rem;
+            line-height: .24rem;
+            text-align: center;
+            padding-left: .88rem;
+        }
 
-.imgBox1{
-    width: .50rem;
-    height: .50rem;
-    border-radius:.25rem;
-    border: solid .015rem #b4b4b4;
-    float: right;
-    text-align: center
-}
+        .imgBox1 {
+            margin-top: 0.35rem;
+            width: .50rem;
+            height: .50rem;
+            line-height: .5rem;
+            border-radius: .25rem;
+            border: solid .015rem #b4b4b4;
+            text-align: center
+        }
 
 
-.imgBox2{
-    width: .52rem;
-    height: .52rem;
-    border-radius:.26rem;
-    background:#ffd161;
-    float: right;
-    text-align: center;
-}
+        .imgBox2 {
+            margin-top: 0.35rem;
+            width: .52rem;
+            height: .52rem;
+            line-height: .5rem;
+            border-radius: .26rem;
+            background: #ffd161;
+            text-align: center;
+        }
 
-.bottomBox1{
-    width: 80%;
-    height: 1.2rem;
-    background: #2b2b2b;
-    margin-top: .22rem;
-    float: left;
-    padding-left: .24rem;
-    font-size: .48rem;
-    color: white;
-}
+        .bigbox {
+            position: relative;
+        }
 
-.bottomBox2{
-    width: 2.2rem;
-    height: 1.2rem;
-    background: #ffd161;
-    margin-top: .22rem;
-    position: absolute;
-    right: 0;
-    font-size: .32rem;
-    text-align: center;
-    line-height: 1.2rem;
-}
+        .bottomBox1 {
+            box-sizing: border-box;
+            width: 5.3rem;
+            height: 1.2rem;
+            background: #2b2b2b;
+            margin-top: .22rem;
+            float: left;
+            padding-left: .24rem;
+            font-size: .48rem;
+            color: white;
+        }
 
-.bottomCircle1{    
-     width: 1.2rem;
-     height: 1.2rem;
-     border-radius: .6rem;
-     background: #ffd161;
-     margin-top: -.3rem;
-     float: left;
-}
+        .bottomBox2 {
+            float: left;
+            width: 2.2rem;
+            height: 1.2rem;
+            background: #ffd161;
+            margin-top: .22rem;
+            position: absolute;
+            right: 0;
+            font-size: .32rem;
+            text-align: center;
+            line-height: 1.2rem;
+        }
 
-.bottomCircle2{
-    width: .3rem;
-    height: .3rem;
-    border-radius: .15rem;
-    background: red;
-    font-size: .18rem;
-    color: white;
-    text-align: center;
-    line-height: .3rem;
-    float: left;
-    position: relative;
-    right: .3rem;
-    bottom: .3rem;
-}
+        .number {
+            float: left;
+        }
 
-.textNum{
-    line-height: .52rem;
-    text-align: center;
-    margin:auto .16rem;
-    float: right;
-}
-</style>
+        .bottomCircle1 {
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: .6rem;
+            background: #ffd161;
+            margin-top: -.3rem;
+            float: left;
+            position: relative;
+        }
+
+        .cart {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            width: .6rem;
+            height: .6rem;
+        }
+
+        .bottomCircle2 {
+            width: .3rem;
+            height: .3rem;
+            border-radius: 50%;
+            background: red;
+            font-size: .18rem;
+            color: white;
+            text-align: center;
+            line-height: .3rem;
+            position: absolute;
+            right: 0rem;
+            top: 0rem;
+        }
+
+        .line {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: .1rem;
+            height: .22rem;
+            background: #ffd161;
+        }
+
+        .textNum {
+            text-align: center;
+            margin: auto .16rem;
+        }
+
+        .flx::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
 </head>
+
 <body>
-        <div class="firstContent">
-                <div class="secondContent">
-                    <p class="yellowBox">新用户立减17.0元（在线支付专享）</p>
-                    <div class="greenBox"></div>
-                    <span class="fisrtPocket">1号口袋</span> 
-                    <p class="shoppingCart">清空购物车</p>
-                    <div class="goodsBox">
-                       <div class="goodsBoxleft">
-                       <p class="goodsText1">经典麦辣鸡腿汉堡中暑可乐可乐可乐</p>
-                       <p class="goodsText2">例</p>
-                       </div>
-                       <div class="goodsBoxright">
-                          <span>￥12</span>
-                          <div class="imgBox2">+</div>
-                          <span class="textNum">2</span>
-                          <div class="imgBox1">-</div>
-                      </div>
-                      </div>
-                    <div class="goodsBox">
-                        <div class="goodsText1">原味板烧鸡腿堡</div>
+    <div class="firstContent">
+        <div class="secondContent">
+            <p class="yellowBox">新用户立减17.0元（在线支付专享）</p>
+            <div class="greenBox"></div>
+            <span class="fisrtPocket">1号口袋</span>
+            <p class="shoppingCart">清空购物车</p>
+            <div class="goodsBox">
+                <div class="goodsBoxleft">
+                    <p class="goodsText1">经典麦辣鸡腿汉堡中暑可乐可乐可乐</p>
+                    <p class="goodsText2">例</p>
+                </div>
+                <div class="goodsBoxright">
+                    <span class="fl m">￥12</span>
+                    <div class="imgBox1 fl">-</div>
+                    <span class="textNum fl">2</span>
+                    <div class="imgBox2 fl">+</div>
+                </div>
+            </div>
+            <div class="goodsBox">
+                <div class="goodsBoxleft">
+                    <p class="goodsText1">经典麦辣鸡腿汉堡中暑可乐可乐可乐</p>
+                    <p class="goodsText2">例</p>
+                </div>
+                <div class="goodsBoxright">
+                    <span class="fl m">￥12</span>
+                    <div class="imgBox1 fl">-</div>
+                    <span class="textNum fl">2</span>
+                    <div class="imgBox2 fl">+</div>
+                </div>
+            </div>
+            <div class="goodsBox">
+                <div class="goodsBoxleft">
+                    <p class="goodsText1">经典麦辣鸡腿汉堡中暑可乐可乐可乐</p>
+                    <p class="goodsText2">例</p>
+                </div>
+                <div class="goodsBoxright">
+                    <span class="fl m">￥12</span>
+                    <div class="imgBox1 fl">-</div>
+                    <span class="textNum fl">2</span>
+                    <div class="imgBox2 fl">+</div>
+                </div>
+            </div>
+            <div class="goodsBox">
+                <div class="goodsBoxleft">
+                    <p class="goodsText1">经典麦辣鸡腿汉堡中暑可乐可乐可乐</p>
+                    <p class="goodsText2">例</p>
+                </div>
+                <div class="goodsBoxright">
+                    <span class="fl m">￥12</span>
+                    <div class="imgBox1 fl">-</div>
+                    <span class="textNum fl">2</span>
+                    <div class="imgBox2 fl">+</div>
+                </div>
+            </div>
+            <div class="goodsBox">
+                <div class="goodsBoxleft">
+                    <p class="goodsText1">经典麦辣鸡腿汉堡中暑可乐可乐可乐</p>
+                    <p class="goodsText2">例</p>
+                </div>
+                <div class="goodsBoxright">
+                    <span class="fl m">￥12</span>
+                    <div class="imgBox1 fl">-</div>
+                    <span class="textNum fl">2</span>
+                    <div class="imgBox2 fl">+</div>
+                </div>
+            </div>
+            <div class="bigbox flx">
+                <div class="line"></div>
+                <div class="bottomBox1">
+                    <div class="bottomCircle1">
+                        <img src="./resource/SVG/shopping_cart.svg" alt="" class="cart">
+                        <div class="bottomCircle2">6</div>
                     </div>
-                    <div class="goodsBox">
-                        <div class="goodsText1">经典麦辣鸡腿汉堡中暑可乐可乐可乐</div>
-                    </div>
-                    <div class="bottomBox1">
-                        <div class="bottomCircle1"></div>
-                        <div class="bottomCircle2">6</div> 
+                    <div class="number">
                         <span>￥98</span>
                         <p class="goodsText2">另需配送费 ￥9</p>
-                   </div>
-                  
-                    <div class="bottomBox2">去结算</div>
-                  
+                    </div>
                 </div>
-              </div>
+                <div class="bottomBox2">去结算</div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
