@@ -60,8 +60,8 @@
 		.imag {
 			width: 1.2rem;
 			height: 1.2rem;
-			margin: .8rem auto .26rem;
-			margin-top: .8rem;
+			margin: 0 auto .26rem;
+			padding-top: 0.8rem;
 			display: block;
 		}
 
@@ -71,17 +71,27 @@
 			position: fixed;
 			top: 0;
 			left: 0;
-			background: rgba(98, 98, 98, .8);
+			background: rgba(118, 118, 118, .7);
 		}
 
 		.sendcontent {
+			position: relative;
 			width: 6.7rem;
 			height: 10rem;
 			background: linear-gradient(250deg , #27282F, #42352C);
 			margin: .86rem auto .4rem auto;
 			border-radius: .2rem;
 			text-align: center;
-			overflow: hidden;
+		}
+		.close {
+			width: 0.8rem;
+			height: 0.8rem;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -1.2rem;
+			margin: 0 auto;
+			cursor: pointer;
 		}
 
 		.lineclass {
@@ -116,6 +126,7 @@
 				<img class="bottomimg" src="./resource/img/icon_dp_full_star@2x.png">
 				<p class="text_normal">新用户立减18元，首次使用银行卡支付最高再减3元</p>
 			</div>
+			<img src="./resource/img/icon_mergeAccount_close@3x.png" class="close" alt="">
 		</div>
 	</div>
 </body>
