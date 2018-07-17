@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        // 获取屏幕大小
+        var deviceWidth = document.documentElement.clientWidth;
+        console.log(deviceWidth)
+        // 设置fontSize,750px rem为100px
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        console.log(document.documentElement.style.fontSize)
+    </script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .topContent {
+            width: 100vw;
+            height: 5.16rem;
+            background-image: url(./resource/img/goods.png);
+            background-repeat: round;
+        }
+
+        .img {
+            width: .6rem;
+            height: .6rem;
+            float: left;
+            margin-left: .2rem;
+        }
+
+        .imgBox {
+            float: right;
+            text-align: center;
+            line-height: .6rem;
+        }
+
+        .imgTopRight {
+            width: .6rem;
+            height: .6rem;
+            float: left;
+            margin-right: .2rem;
+        }
+
+        .title {
+            font-size: .3rem;
+            color: #333333;
+            line-height: .6rem;
+            padding-left: .32rem;
+        }
+
+        .textSale {
+            font-size: .22rem;
+            color: #9d9d9d;
+            padding-left: .32rem;
+        }
+
+        .breif {
+            width: .9rem;
+            color: #ffd161;
+            line-height: .3rem;
+            font-size: .22rem;
+            border: solid .01rem #ffd161;
+            margin: .12rem 0 0 .32rem;
+            padding: .02rem;
+        }
+
+        .priceBox {
+
+            padding: .32rem .24rem .32rem .32rem;
+
+        }
+
+        .priceBox::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .priceLeft {
+            position: relative;
+            float: left;
+        }
+
+        .priceLeft::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .price {
+            font-size: .34rem;
+            color: #fb4e44;
+            float: left;
+        }
+
+        .textNum {
+            font-size: .22rem;
+            color: #9d9d9d;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .select {
+            width: 1.28rem;
+            height: .6rem;
+            border-radius: .3rem;
+            background: #ffd161;
+            float: right;
+            color: #333333;
+            font-size: .24rem;
+            text-align: center;
+            line-height: .6rem;
+        }
+
+        .line {
+            width: 100vw;
+            height: .2rem;
+            background: #f4f4f4;
+        }
+
+        .commentBox {
+            padding: .32rem;
+            text-align: center;
+        }
+
+        .commentLeft {
+            float: left;
+        }
+
+        .commentTitle {
+            font-size: .26rem;
+            color: #333333;
+            float: left;
+        }
+
+        .praise {
+            font-size: .22rem;
+            float: left;
+        }
+
+        .commentRight {
+            float: right;
+            font-size: .26rem;
+            color: #9d9d9d;
+        }
+
+        .smallLine {
+            width: 100vw;
+            height: .01rem;
+            background: #f4f4f4;
+            margin-left: .32rem;
+        }
+
+        .detailBox {
+            padding: .3rem .28rem .34rem .32rem;
+
+        }
+
+        .detailBox::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .detailLeft {
+            width: .82rem;
+            height: .82rem;
+            border-radius: 50%;
+            background: #fb4e44;
+            float: left;
+        }
+
+        .detailRight {
+            padding-left: .2rem;
+            padding-top: .12rem;
+            margin-left: .82rem;
+        }
+
+
+        .commentContent {
+            font-size: .26rem;
+        }
+
+
+        .first::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .nickName {
+            font-size: .24rem;
+            color: #333333;
+            float: left;
+        }
+
+        .date {
+            font-size: .2rem;
+            color: #666666;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+<div class="topContent">
+    <img class="img" src="./resource/img/icon_mergeAccount_close@2x.png">
+    <div class="imgBox">
+        <img class="imgTopRight" src="./resource/img/icon_mergeAccount_close@2x.png">
+        <img class="imgTopRight" src="./resource/img/icon_mergeAccount_close@2x.png">
+    </div>
+</div>
+
+<div class="title">麦辣鸡翅2快</div>
+<div class="textSale">月销售 968</div>
+<div class="breif">网友推荐</div>
+
+<div class="priceBox">
+    <div class="priceLeft">
+        <div class="price">￥11</div>
+        <div class="textNum">/例</div>
+    </div>
+    <div class="select">选规格</div>
+</div>
+
+<div class="line"></div>
+
+<div class="commentBox">
+    <div class="commentLeft">
+        <div class="commentTitle">外卖评价</div>
+        <div class="praise">（好评度100%）</div>
+    </div>
+    <div class="commentRight">4条评论 ></div>
+</div>
+
+<div class="smallLine"></div>
+
+<div class="detailBox">
+    <div class="detailLeft"></div>
+    <div class="detailRight">
+        <div class="first">
+            <div class="nickName">一点一点</div>
+            <div class="date">2018.7.18</div>
+        </div>
+        <p class="commentContent">新京报网以文字、图片、视频等全媒体形式,为用户提供全天候热点新闻,涵盖突发新闻、时事、财经、娱乐、体育,以及</p>
+    </div>
+</div>
+
+</html>
