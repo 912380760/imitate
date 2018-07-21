@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 获取屏幕大小
+        var deviceWidth = document.documentElement.clientWidth;
+        console.log(deviceWidth)
+        // 设置fontSize,750px rem为100px
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        console.log(document.documentElement.style.fontSize)
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .flx::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        body {
+            background: #F4F4F4;
+        }
+        .topbox {
+            position: relative;
+            background: #fff;
+            margin-bottom: .2rem;
+        }
+        .topbox > img {
+            display: block;
+            width: 100%;
+            height: 5.16rem;
+            object-fit: cover;
+        }
+        .title-box {
+            padding: 0 .25rem 0 .32rem;
+        }
+        .title-box .title1 {
+            color: #333;
+            line-height: .6rem;
+            font-size: .3rem;
+            font-weight: bold;
+        }
+        .title-box .text1 {
+            color: #9d9d9d;
+            font-size: .22rem;
+            padding-bottom: 12px;
+        }
+        .title-box .tag {   
+            padding: .04rem;
+            width: 1.4rem;
+            border: 1px solid #FF9027;
+            margin-bottom: .32rem;
+        }
+        .title-box .tag img {
+            float: left;
+            height: .3rem;
+            margin-right: .05rem;
+        }
+        .title-box .tag span{
+            float: left;
+            color: #FF9027;
+            font-size: .24rem;
+            line-height: .3rem;
+        }
+        .title-box .text2-box {
+            padding-bottom: .32rem;
+        }
+        .title-box .text2-box p {
+            color: #fb4144;
+            font-size: .34rem;
+        }
+        .title-box .text2-box p span {
+            color: #9d9d9d;
+            font-size: .22rem;
+        }
+        .title-box .text2-box .btn {
+            float: right;
+            border-radius: 50%;
+            background: #ffd36e;
+        }
+        .topbox .top-btn {
+            position: absolute;
+            width: 0.6rem;
+            height: 0.6rem;
+        }
+        .topbox .close {
+            top: 0;
+            left: 0.2rem;
+            
+        }
+        .topbox .brand {
+            top: 0;
+            right: 1rem;
+        }
+        .topbox .return {
+            top: 0;
+            right: .2rem;
+        }
+
+        .btn {
+            position: absolute;
+            bottom: .2rem;
+            right: .24rem;
+            background: #ffd161;
+            height: 0.6rem;
+            width: 1.28rem;
+            font-size: .24rem;
+            border-radius: .3rem;
+            text-align: center;
+            line-height: .6rem;
+        }
+        
+        .comment {
+            padding-left: .32rem;
+            background: #fff;
+        }
+        .comment-title {
+            padding: .32rem 0;
+            border-bottom: 1px solid #F3F3F3;
+        }
+        .comment-title .left {
+            float: left;
+            font-size: .26rem;
+            line-height: 1.5;
+        }
+        .comment-title .left span {
+            font-size: .24rem;
+        }
+        .comment-title .left .red {
+            color: red;
+        }
+        .comment-title .right {
+            float: right;
+            font-size: .26rem;
+            line-height: 1.5;
+            color: #9d9d9d;
+            padding-right: .32rem;
+        }
+        .comment-title .right span {
+            float: left;
+        }
+        .comment-title .right img {
+            float: left;
+            margin-left: .24rem;
+            height: .26rem;
+            position: relative;
+            top: .07rem;
+        }
+
+        .comment .user {
+            display: flex;
+            padding: .3rem 0 .34rem;
+            border-bottom: 1px solid #F3F3F3;
+        }
+        .comment .user img {
+            border-radius: 50%;
+            margin-right: 0.2rem;
+            width: 0.82rem;
+            height: .82rem;
+        }
+        .comment .user .usertitle {
+            padding-right: .28rem;
+            flex: 1;
+        }
+        .user .titlebox {
+            padding: .12rem 0 .34rem;
+        }
+        .user .username {
+            max-width: 3.4rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-wrap: none;
+            float: left;
+            font-size: .24rem;
+            color: #333;
+        }
+        .user .time {
+            font-size: .2rem;
+            color: #666;
+            float: right;
+        }
+        .user .content {
+            font-size: .26rem;
+            line-height: .38rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="topbox">
+        <img src="http://p0.meituan.net/xianfu/38bbfa3f955cbce3330f1cb6818d0ce6216794.png.webp" alt="">
+
+        <div class="title-box">
+            <p class="title1">麦辣鸡翅两块</p>
+            <p class="text1">月销968</p>
+            <div class="tag flx">
+                <img src="./resource/img/icon_label_friend@2x.png" alt="">
+                <span>网友推荐</span>
+            </div>
+            <div class="text2-box">
+                <p>¥11<span>/例</span></p>
+            </div>
+        </div>
+        
+        <div class="btn">选规格</div>
+        <img src="./resource/img/icon_mergeAccount_close@2x.png" class="top-btn close" alt="">
+        <img src="./resource/img/icon_mergeAccount_close@2x.png" class="top-btn brand" alt="">
+        <img src="./resource/img/icon_mergeAccount_close@2x.png" class="top-btn return" alt="">
+    </div>
+
+    <div class="comment">
+        <div class="comment-title flx">
+            <div class="left">外卖评价 <span>(好评度<span class="red">100%</span>)</span></div>
+            <div class="right flx"><span>4条评论</span><img src="./resource/img/icon_arrow_gray@2x.png" alt=""></div>
+        </div>
+
+        <div class="user">
+            <img src="https://img.meituan.net/avatar/71ef89fa000e783d5b8d86c2767a9d28195580.jpg.webp" alt="">
+            <div class="usertitle">
+                <div class="titlebox flx">
+                    <p class="username">ejX309524666</p>
+                    <p class="time">2017.06.30</p>
+                </div>
+                <div class="content">#奶油坚果酱中套餐#不好吃。还是奥尔良，麦辣鸡腿那些最经典的汉堡好吃。薯条软得不能再软了。我备注了可乐换芬达也没有换。#麦辣鸡翅2块#就还好，里面的肉挺嫩的，很入味。</div>
+            </div>
+        </div>
+        <div class="user">
+            <img src="https://img.meituan.net/avatar/71ef89fa000e783d5b8d86c2767a9d28195580.jpg.webp" alt="">
+            <div class="usertitle">
+                <div class="titlebox flx">
+                    <p class="username">ejX309524666</p>
+                    <p class="time">2017.06.30</p>
+                </div>
+                <div class="content">#奶油坚果酱中套餐#不好吃。还是奥尔良，麦辣鸡腿那些最经典的汉堡好吃。薯条软得不能再软了。我备注了可乐换芬达也没有换。#麦辣鸡翅2块#就还好，里面的肉挺嫩的，很入味。</div>
+            </div>
+        </div>
+        <div class="user">
+            <img src="https://img.meituan.net/avatar/71ef89fa000e783d5b8d86c2767a9d28195580.jpg.webp" alt="">
+            <div class="usertitle">
+                <div class="titlebox flx">
+                    <p class="username">ejX309524666</p>
+                    <p class="time">2017.06.30</p>
+                </div>
+                <div class="content">#奶油坚果酱中套餐#不好吃。还是奥尔良，麦辣鸡腿那些最经典的汉堡好吃。薯条软得不能再软了。我备注了可乐换芬达也没有换。#麦辣鸡翅2块#就还好，里面的肉挺嫩的，很入味。</div>
+            </div>
+        </div>
+        <div class="user">
+            <img src="https://img.meituan.net/avatar/71ef89fa000e783d5b8d86c2767a9d28195580.jpg.webp" alt="">
+            <div class="usertitle">
+                <div class="titlebox flx">
+                    <p class="username">ejX309524666</p>
+                    <p class="time">2017.06.30</p>
+                </div>
+                <div class="content">#奶油坚果酱中套餐#不好吃。还是奥尔良，麦辣鸡腿那些最经典的汉堡好吃。薯条软得不能再软了。我备注了可乐换芬达也没有换。#麦辣鸡翅2块#就还好，里面的肉挺嫩的，很入味。</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
