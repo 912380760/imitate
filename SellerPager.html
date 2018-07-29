@@ -53,7 +53,7 @@
 
         .first .search {
             width: 100%;
-            height:100%;
+            height: 100%;
             border-radius: .31rem;
             background: #f4f4f4;
             font-size: .26rem;
@@ -63,17 +63,17 @@
             border: none;
         }
 
-        .first .inputbox{
+        .first .inputbox {
             display: block;
             position: relative;
             flex: 1;
             height: .62rem;
             margin: 0 .48rem 0 .42rem;
             align-items: center;
-           
+
         }
 
-        .first .searchimg{
+        .first .searchimg {
             width: .32rem;
             height: .32rem;
             position: absolute;
@@ -81,9 +81,14 @@
             top: calc(50% - .32rem / 2)
         }
 
+        .searchimg ::-webkit-input-placeholder {}
+
         .first .textp {
             font-size: .22rem;
-            color: white
+            color: white;
+            padding: 0 .1rem;
+            line-height: .4rem;
+            border: solid 1px white;
         }
 
         .topcontent .sencond {
@@ -149,8 +154,8 @@
         }
 
         .third .imgbox3 {
-            width: .24rem;
-            height: .24rem;
+            width: .15rem;
+            height: auto;
         }
 
         .titlebox {
@@ -162,19 +167,25 @@
             line-height: .79rem;
         }
 
-        .titlebox .title1 {
+        .titlebox .title {
             flex: 1;
             color: #666666;
         }
 
-        .titlebox .title2 {
-            flex: 1;
-            color: #666666;
+        .titlebox .title.active {
+            color: #ffd161;
+            position: relative;
         }
 
-        .titlebox .title3 {
-            flex: 1;
-            color: #ffbb22;
+        .title.active::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - .25rem);
+            width: .5rem;
+            height: 2px;
+            background: #ffd161;
         }
 
         .address {
@@ -263,11 +274,11 @@
         <div class="first">
             <img src="./resource/img/white_arrow_for_left_button@3x.png" class="leftimg" />
             <div class="inputbox">
-                <img src="./resource/img/sm_same_brand_arrow_right@2x.png" class="searchimg"/>
-                <input type="text"  placeholder="搜索店内商品"  class="search">
+                <img src="./resource/img/sm_same_brand_arrow_right@2x.png" class="searchimg" />
+                <input type="text" placeholder="搜索店内商品" class="search">
             </div>
             <div class="textp">拼单</div>
-
+            <img src="./resource/img/sm_same_brand_more_icon@2x.png" />
         </div>
 
         <div class="sencond flx">
@@ -288,9 +299,9 @@
     </div>
 
     <div class="titlebox">
-        <div class="title1">点菜</div>
-        <div class="title2">评价(3682)</div>
-        <div class="title3">商家</div>
+        <div class="title">点菜</div>
+        <div class="title">评价(3682)</div>
+        <div class="title active">商家</div>
     </div>
 
     <div class="address flx">
@@ -332,17 +343,17 @@
     </div>
 
     <div class="time">
-            <div class="timebox flx">
-                <img src="./resource/img/server.png" class="timeimg" />
-                <div class="normaltitle">商家服务：可开发票</div>
-            </div>
-    
-            <div class="line"></div>
-            <div class="timebox flx">
-                <img src="http://p0.meituan.net/xianfu/019d1bbb1310b1531e6af6172c9a5095581.png" class="timeimg" />
-                <div class="normaltitle">新用户立减17元,首次使用银行卡支付最高再减3元(在线支付专享)</div>
-            </div>
+        <div class="timebox flx">
+            <img src="./resource/img/server.png" class="timeimg" />
+            <div class="normaltitle">商家服务：可开发票</div>
         </div>
+
+        <div class="line"></div>
+        <div class="timebox flx">
+            <img src="http://p0.meituan.net/xianfu/019d1bbb1310b1531e6af6172c9a5095581.png" class="timeimg" />
+            <div class="normaltitle">新用户立减17元,首次使用银行卡支付最高再减3元(在线支付专享)</div>
+        </div>
+    </div>
 
 </body>
 
