@@ -150,12 +150,15 @@
             font-size: .22rem;
             color: white;
             margin-left: .36rem;
+            padding-right: 0.1rem;
             float: left;
         }
 
         .third .imgbox3 {
+            position: relative;
             width: .15rem;
             height: auto;
+            top: 0.04rem;
         }
 
         .titlebox {
@@ -188,20 +191,27 @@
             background: #ffd161;
         }
 
-        .address {
-            margin-top: .22rem;
+        .secondContent {
             background: white;
-            padding: .32rem 0 .32rem .32rem;
+            padding-left: .3rem;
+
+        }
+
+        .address {
+            display: flex;
+            margin-top: .22rem;
+            align-items: center;
+            padding: .32rem 0 .32rem .02rem;
+            border-bottom: 1px solid #f4f4f4;
         }
 
         .address .icon {
-            float: left;
             width: .32rem;
-            height: .32rem;
+            height: .38rem;
         }
 
         .address .detail {
-            float: left;
+            flex: 1;
             line-height: .36rem;
             font-size: .26rem;
             margin: 0 .62rem 0 .22rem;
@@ -209,35 +219,37 @@
         }
 
         .address .phoneimg {
-            float: left;
-            margin-left: .42rem;
+            width: 0.4rem;
+            height: 0.4rem;
+            margin: 0 .42rem;
         }
 
-        .line {
-            width: 100vw;
-            height: .02rem;
-            background: #f4f4f4;
-            margin-left: .3rem;
-        }
 
         .sellerImg {
-            background: white;
-            padding: .2rem 0 .2rem .3rem;
+            padding: .2rem 0;
+            overflow-x: scroll;
+            border-bottom: 1px solid #f4f4f4;
+        }
+
+        .img-box {
+            width: 12.48rem;
         }
 
         .sellerImg .image1 {
+            float: left;
             width: 1.88rem;
             height: 1.88rem;
             margin-right: .2rem;
         }
 
         .safebox {
-            background: white;
-            padding: .3rem .28rem .3rem .32rem;
+            padding: .3rem .28rem .3rem .02rem;
             margin: 0 auto;
         }
 
         .safebox .safeimg {
+            width: .34rem;
+            height: .38rem;
             float: left;
         }
 
@@ -248,28 +260,49 @@
             margin-left: .22rem;
         }
 
+
         .safebox .rightimg {
             float: right;
         }
 
         .time {
             margin-top: .22rem;
-        }
-
-        .timebox {
-            padding: .3rem .28rem .3rem .32rem;
+            padding-left: .32rem;
             background: white;
         }
 
-        .timebox .timeimg {
+        .timebox {
+            display: flex;
+            padding: .3rem .28rem .3rem 0;
+            border-bottom: #f4f4f4 1px solid;
+        }
+
+        .timebox:last-child {
+            border: none;
+        }
+
+        .normaltitle2 {
+            flex: 1;
+            color: #666666;
+            font-size: .26rem;
             float: left;
+        }
+
+        .timebox .timeimg {
+            width: .34rem;
+            height: .34rem;
+            float: left;
+        }
+
+        .last{
+            background: white;
+            height: .32rem;
         }
     </style>
 
 </head>
 
 <body>
-
     <div class="topcontent flx">
         <div class="first">
             <img src="./resource/img/white_arrow_for_left_button@3x.png" class="leftimg" />
@@ -304,56 +337,65 @@
         <div class="title active">商家</div>
     </div>
 
-    <div class="address flx">
-        <img src="./resource/img/address.png" class="icon" />
-        <div class="detail">广东省深圳市宝安区明智大道潜龙鑫</div>
-        <img src="./resource/img/phone.png" class="phoneimg" />
-    </div>
+    <div class="secondContent">
+        <div class="address">
+            <img src="./resource/img/address.png" class="icon" />
+            <div class="detail">广东省深圳市宝安区明智大道潜龙鑫广东省深圳市宝安区明智大道潜龙鑫</div>
+            <img src="./resource/img/phone.png" class="phoneimg" />
+        </div>
 
-    <div class="line"></div>
+        <div class="sellerImg">
+            <div class="img-box">
+                <img src="https://qcloud.dpfile.com/pc/gTO6A5LeLS5261jz3tXDJJtaoD68aUKQtaxTW05Tv7OvUfSEWLnOs9Vq_Gu0SkrY.jpg" class="image1"
+                />
+                <img src="https://qcloud.dpfile.com/pc/gTO6A5LeLS5261jz3tXDJJtaoD68aUKQtaxTW05Tv7OvUfSEWLnOs9Vq_Gu0SkrY.jpg" class="image1"
+                />
+                <img src="https://qcloud.dpfile.com/pc/gTO6A5LeLS5261jz3tXDJJtaoD68aUKQtaxTW05Tv7OvUfSEWLnOs9Vq_Gu0SkrY.jpg" class="image1"
+                />
+                <img src="https://qcloud.dpfile.com/pc/gTO6A5LeLS5261jz3tXDJJtaoD68aUKQtaxTW05Tv7OvUfSEWLnOs9Vq_Gu0SkrY.jpg" class="image1"
+                />
+                <img src="https://qcloud.dpfile.com/pc/gTO6A5LeLS5261jz3tXDJJtaoD68aUKQtaxTW05Tv7OvUfSEWLnOs9Vq_Gu0SkrY.jpg" class="image1"
+                />
+                <img src="https://qcloud.dpfile.com/pc/gTO6A5LeLS5261jz3tXDJJtaoD68aUKQtaxTW05Tv7OvUfSEWLnOs9Vq_Gu0SkrY.jpg" class="image1"
+                />
+            </div>
+        </div>
 
-    <div class="sellerImg">
-        <img src="https://qcloud.dpfile.com/pc/gTO6A5LeLS5261jz3tXDJJtaoD68aUKQtaxTW05Tv7OvUfSEWLnOs9Vq_Gu0SkrY.jpg" class="image1"
-        />
-        <img src="https://qcloud.dpfile.com/pc/gTO6A5LeLS5261jz3tXDJJtaoD68aUKQtaxTW05Tv7OvUfSEWLnOs9Vq_Gu0SkrY.jpg" class="image1"
-        />
-        <img src="https://qcloud.dpfile.com/pc/gTO6A5LeLS5261jz3tXDJJtaoD68aUKQtaxTW05Tv7OvUfSEWLnOs9Vq_Gu0SkrY.jpg" class="image1"
-        />
-    </div>
+        <div class="safebox flx">
+            <img src="./resource/img/safety.png" class="safeimg" />
+            <div class="normaltitle">查看食品安全档案</div>
+            <img src="./resource/img/sm_same_brand_arrow_right@2x.png" class="rightimg" />
+        </div>
 
-    <div class="line"></div>
-
-    <div class="safebox flx">
-        <img src="./resource/img/safety.png" class="safeimg" />
-        <div class="normaltitle">查看食品安全档案</div>
-        <img src="./resource/img/sm_same_brand_arrow_right@2x.png" class="rightimg" />
     </div>
 
     <div class="time">
-        <div class="timebox flx">
+        <div class="timebox">
             <img src="./resource/img/time.png" class="timeimg" />
-            <div class="normaltitle">配送服务：由 商家 提供配送服务</div>
+            <div class="normaltitle">配送服务：</div>
+            <div class="normaltitle2">由 商家 提供配送服务由 商家 提供配送服务由 商家 提供配送服务</div>
         </div>
 
-        <div class="line"></div>
-        <div class="timebox flx">
+        <div class="timebox">
             <img src="./resource/img/time.png" class="timeimg" />
-            <div class="normaltitle">配送时间：商家 提供配送服务</div>
+            <div class="normaltitle">配送时间：</div>
+            <div class="normaltitle2">提供配送服务由 商家 提供配送服务由 商家 提供配送服务</div>
         </div>
     </div>
 
     <div class="time">
-        <div class="timebox flx">
+        <div class="timebox">
             <img src="./resource/img/server.png" class="timeimg" />
             <div class="normaltitle">商家服务：可开发票</div>
         </div>
 
-        <div class="line"></div>
         <div class="timebox flx">
             <img src="http://p0.meituan.net/xianfu/019d1bbb1310b1531e6af6172c9a5095581.png" class="timeimg" />
             <div class="normaltitle">新用户立减17元,首次使用银行卡支付最高再减3元(在线支付专享)</div>
         </div>
     </div>
+
+    <div class="last"></div>
 
 </body>
 
