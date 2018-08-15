@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 获取屏幕大小
+        var deviceWidth = document.documentElement.clientWidth;
+        console.log(deviceWidth)
+        // 设置fontSize,750px rem为100px
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        console.log(document.documentElement.style.fontSize)
+    </script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #f4f4f4;
+            font-size: .22rem;
+        }
+
+        .flx::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        .topContent {
+            padding: .4rem .2rem .2rem;
+            background: url("http://p0.meituan.net/xianfu/19c002c5963a289206e756092995a2fe230070.jpg");
+        }
+
+        .topContent .firstBox {
+            display: flex;
+            padding: .12rem .1rem 0 .22rem;
+            text-align: center;
+            align-items: center;
+        }
+
+        .firstBox .leftimg {
+            width: .3rem;
+            height: .54rem;
+        }
+
+        .firstBox .searchBox {
+            position: relative;
+            flex: 1;
+            height: .62rem;
+            margin: 0 .48rem 0 .42rem;
+        }
+
+        .searchBox .searchimg {
+            width: .32rem;
+            height: .32rem;
+            position: absolute;
+            left: .3rem;
+            top: calc(50% - .32rem / 2)
+        }
+
+        .searchBox .inputBox {
+            width: 100%;
+            height: 100%;
+            border-radius: .31rem;
+            background: #f4f4f4;
+            font-size: .26rem;
+            line-height: .26rem;
+            align-items: center;
+            text-indent: .6rem;
+            border: none;
+        }
+
+        .searchBox ::-webkit-input-placeholder {
+            color: #666666;
+        }
+
+        .searchBox .rightText {
+            font-size: .22rem;
+            color: white;
+            padding: 0 .1rem;
+            line-height: .4rem;
+            border: solid 1px white;
+        }
+
+        .topContent .secondBox {
+            padding: .34rem .2rem .22rem 0;
+        }
+
+        .secondBox .imgbox1 {
+            float: left;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .secondBox .title {
+            float: left;
+            font-size: .32rem;
+            font-weight: bold;
+            color: white;
+            padding: .35rem 0 0 .2rem;
+        }
+
+        .secondBox .right {
+            float: right;
+            font-size: .22rem;
+            color: white;
+            text-align: center
+        }
+
+        .right .imgbox2 {
+            width: .5rem;
+            height: .5rem;
+        }
+
+        .right .text {
+            margin-top: .14rem;
+            font-size: .22rem;
+        }
+
+        .topContent .thirdBox {}
+
+        .thirdBox .text1 {
+            float: left;
+            width: .32rem;
+            height: .32rem;
+            font-size: .22rem;
+            background: #ffd161;
+            line-height: .32rem;
+            text-align: center;
+            color: white;
+        }
+
+        .thirdBox .text2 {
+            float: left;
+            font-size: .22rem;
+            color: white;
+            padding-left: .15rem;
+        }
+
+        .thithirdBox .text3 {
+            float: left;
+            font-size: .22rem;
+            color: white;
+            margin-left: .36rem;
+            padding-right: 0.1rem;
+        }
+
+        .thirdBox .imgBox3 {
+            position: relative;
+            width: .15rem;
+            height: auto;
+            top: 0.04rem;
+        }
+
+        .titleBox {
+            display: flex;
+            height: .79rem;
+            background: white;
+            font-size: .26rem;
+            text-align: center;
+            line-height: .79rem;
+        }
+
+        .titleBox .title {
+            flex: 1;
+            color: #666666;
+        }
+
+        .titleBox .title.active {
+            color: #ffd161;
+            position: relative;
+        }
+
+        .title.active::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - .25rem);
+            width: .5rem;
+            height: 2px;
+            background: #ffd161;
+        }
+
+        .scoreBox {
+            margin-top: 1px;
+            padding: .4rem .52rem .36rem;
+            background: white;
+        }
+
+        .scoreBox .leftBox {
+            float: left;
+        }
+
+        .leftBox .score {
+            color: #ffd161;
+            font-size: .46rem;
+        }
+
+        .leftBox .sellerText {
+            color: #666666;
+            padding-top: .18rem;
+        }
+
+        .scoreBox .middleBox {
+            float: left;
+            text-align: center;
+            padding: .04rem .7rem 0 .56rem;
+        }
+
+        .middleBox .textBox1 {}
+
+        .middleBox .textBox2 {
+            margin-top: .28rem;
+        }
+
+        .middleBox .text1 {
+            float: left;
+            color: #666666;
+            font-size: .22rem;
+        }
+
+        .middleBox .starBox {
+            float: left;
+            height: .22rem;
+            padding: 0 .22rem;
+        }
+
+        .middleBox .star {
+            float: left;
+            width: .2rem;
+            margin-left: .1rem;
+        }
+
+        .middleBox .text2 {
+            float: left;
+            font-size: .26rem;
+            color: #ffd161;
+        }
+
+        .scoreBox .rightBox {
+            float: right;
+        }
+
+        .rightBox .score {
+            color: #999999;
+            font-size: .36rem;
+        }
+
+        .rightBox .scoreText {
+            color: #666666;
+            padding-top: .2rem;
+        }
+
+        .commentBox {
+            margin-top: .2rem;
+        }
+
+        .commentBox .titleBox {
+            display: flex;
+            padding: .32rem .32rem .22rem;
+            font-size: .26rem;
+        }
+
+        .titleBox .secondTitle {
+            flex: 1;
+            border: #ffd161 1px solid;
+            color: #ffd161;
+        }
+
+        .titleBox .secondTitle.titleActive {
+            color: black;
+            background: #ffd161;
+        }
+
+        .titleBox .img {
+            width: .2rem;
+        }
+
+
+        .commentBox .secondComment {
+            padding: 0 .32rem;
+            background: white;
+        }
+
+        .secondComment .content {
+            display: inline-block;
+            color: #656565;
+            background: #f4f4f4;
+            font-size: .24rem;
+            padding: .14rem;
+            margin: 0 .12rem .12rem 0;
+        }
+
+        .commentBox .thirdComment {
+            display: flex;
+            padding: .4rem .3rem .32rem .3rem;
+            margin-bottom: 1px;
+            background: white;
+        }
+
+        .thirdComment .leftBox {
+            width: 1.2rem;
+        }
+
+        .leftBox .headimg {
+            width: .7rem;
+            height: .7rem;
+            border-radius: 50%;
+        }
+
+        .thirdComment .rightBox {
+            flex: 1;
+        }
+
+        .rightBox .first {
+            display: flex;
+        }
+
+        .first .text1 {
+            flex: 1;
+            color: black;
+            overflow: hidden;
+        }
+
+        .first .text2 {
+            color: #999999;
+        }
+
+        .rightBox .text3{
+            color: #999999;
+            margin-top: .24rem;
+        }
+
+        .rightBox .commentContent{
+            margin-top: .3rem;
+            color: #656565;
+        }
+
+        .commentBox .bottom{
+            background: black;
+            height: .32rem;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="topContent">
+        <div class="firstBox">
+            <img src="./resource/img/white_arrow_for_left_button@3x.png" class="leftimg" />
+            <div class="searchBox">
+                <img src="./resource/img/sm_same_brand_arrow_right@2x.png" class="searchimg" />
+                <input type="text" placeholder="搜索店内商品" class="inputBox">
+                <!-- <div class="rightText">拼单</div> -->
+            </div>
+        </div>
+
+        <div class="secondBox flx">
+            <img src=" ./resource/img/m.png " class="imgbox1">
+            <div class="title">深圳麦当劳明智餐厅</div>
+            <div class="right">
+                <img src="./resource/img/btn_pop_up_view_close@2x.png" class="imgbox2" />
+                <div class="text">收藏</div>
+            </div>
+        </div>
+
+        <div class="thirdBox flx">
+            <div class="text1">首</div>
+            <span class="text2">新用户立减17元，首次使用银行卡支付最高再减3元</span>
+            <span class="text3">一个活动</span>
+            <img src="./resource/img/icon_cell_rightArrow@2x.png" class="imgbox3" />
+        </div>
+    </div>
+
+    <div class="titleBox">
+        <div class="title">点菜</div>
+        <div class="title  active">评价(3682)</div>
+        <div class="title">商家</div>
+    </div>
+
+    <div class="scoreBox flx">
+        <div class="leftBox">
+            <div class="score">4.6</div>
+            <div class="sellerText">商家评分</div>
+        </div>
+
+        <div class="middleBox">
+            <div class="textBox1 flx">
+                <div class="text1">口味</div>
+                <div class="starBox flx">
+                    <img src="./resource/img/icon_dp_full_star@2x.png" class="star">
+                    <img src="./resource/img/icon_dp_full_star@2x.png" class="star">
+                    <img src="./resource/img/icon_dp_full_star@2x.png" class="star">
+                    <img src="./resource/img/icon_dp_full_star@2x.png" class="star">
+                    <img src="./resource/img/icon_dp_full_star@2x.png" class="star">
+                </div>
+                <div class="text2">4.6</div>
+            </div>
+            <div class="textBox2 flx">
+                <div class="text1">包装</div>
+                <div class="starBox flx">
+                    <img src="./resource/img/icon_dp_full_star@2x.png" class="star">
+                    <img src="./resource/img/icon_dp_full_star@2x.png" class="star">
+                    <img src="./resource/img/icon_dp_full_star@2x.png" class="star">
+                    <img src="./resource/img/icon_dp_full_star@2x.png" class="star">
+                    <img src="./resource/img/icon_dp_full_star@2x.png" class="star">
+                </div>
+                <div class="text2">4.7</div>
+            </div>
+        </div>
+        <div class="rightBox flx">
+            <div class="score">4.6</div>
+            <div class="scoreText">配送评分</div>
+        </div>
+    </div>
+
+    <div class="commentBox">
+        <div class="titleBox">
+            <div class="secondTitle titleActive">全部</div>
+            <div class="secondTitle">有图</div>
+            <div class="secondTitle">
+                <img src="./resource/img/icon_label_friend@2x.png" class="img"> 商家
+            </div>
+        </div>
+
+        <div class="secondComment">
+            <div class="content">好评 3427</div>
+            <div class="content">差评 180</div>
+            <div class="content">味道赞 45</div>
+            <div class="content">服务好 20</div>
+            <div class="content">满意 45</div>
+            <div class="content">少送错送 45</div>
+        </div>
+
+        <div class="thirdComment">
+            <div class="leftBox">
+                <img class="headimg" src="https://img.meituan.net/avatar/71ef89fa000e783d5b8d86c2767a9d28195580.jpg.webp">
+            </div>
+            <div class="rightBox">
+                <div class="first">
+                    <div class="text1">ejX309524666</div>
+                    <div class="text2">2017.08.31</div>
+                </div>
+                <div class="text3">评分</div>
+                <div class="commentContent">#奶油坚果酱中套餐#不好吃。还是奥尔良，麦辣鸡腿那些最经典的汉堡好吃。薯条软得不能再软了。我备注了可乐换芬达也没有换。#麦辣鸡翅2块#就还好，里面的肉挺嫩的，很入味。</div>
+            </div>
+        </div>
+
+        <div class="thirdComment">
+            <div class="leftBox">
+                <img class="headimg" src="https://img.meituan.net/avatar/71ef89fa000e783d5b8d86c2767a9d28195580.jpg.webp">
+            </div>
+            <div class="rightBox">
+                <div class="first">
+                    <div class="text1">ejX309524666</div>
+                    <div class="text2">2017.08.31</div>
+                </div>
+                <div class="text3">评分</div>
+                <div class="commentContent">#奶油坚果酱中套餐#不好吃。还是奥尔良，麦辣鸡腿那些最经典的汉堡好吃。薯条软得不能再软了。我备注了可乐换芬达也没有换。#麦辣鸡翅2块#就还好，里面的肉挺嫩的，很入味。</div>
+            </div>
+        </div>
+
+        <div class="bottom"></div>
+    </div>
+
+</body>
+
+</html>
